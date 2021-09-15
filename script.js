@@ -43,12 +43,12 @@ if(!guess){t
 }
 else if(guess!==secretNumber){
     if(score > 1){
-        displayMessage = guess > secretNumber? 'too high' : 'too low';
+        displayMessage( guess > secretNumber? 'too high' : 'too low');
         score--;
-        displayScore = score;
+        // displayScore = score;
         }else{ 
-            displayMessage = 'you lost the Game';
-            dispalayScore = 0;
+            displayMessage ('you lost the Game');
+            document.querySelector('.score').textContent = 0;
 }
 }
 });
